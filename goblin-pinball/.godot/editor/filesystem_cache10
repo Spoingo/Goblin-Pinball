@@ -1,0 +1,22 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1793829715
+flippers.gd::GDScript::5553394827304302834::1793829611::0::1::::<>Node2D<><>0<>0<><>::
+flippers.tscn::PackedScene::2105848255826288765::1793829611::0::1::::<><><>0<>0<><>::uid://cledupjga0sgw::::res://flippers.gd<>uid://cger0aafyu05i::::res://Untitled_Artwork 32.png
+icon.svg::CompressedTexture2D::5257175247942339948::1793829611::1793829638::1::::<><><>0<>0<>99a5c5e03e52ca7adbcc6f3572be33a7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+IMG_0069.png::CompressedTexture2D::8598012992526383439::1793829611::1793829638::1::::<><><>0<>0<>7dcfd8689a43d1be906ff1bf220452a3<>res://.godot/imported/IMG_0069.png-367143cc3f7e243fcbaa1545f67841de.ctex::
+launcher.gd::GDScript::4593867095666808230::1793829611::0::1::::<>RigidBody2D<><>0<>0<><>::
+level.gd::GDScript::9154423340169517267::1793829611::0::1::::<>Node2D<><>0<>0<><>::
+level.tscn::PackedScene::4052237803677726787::1793829611::0::1::::<><><>0<>0<><>::uid://d3oqari8wbkbb::::res://level.gd<>uid://cemfvpu6fuoge::::res://Untitled_Artwork 32 copy 6.png<>uid://cr3dx3vr4j3w5::::res://Untitled_Artwork 32 copy 5.png<>uid://5adapfc6lmd6::::res://flippers.tscn<>uid://ca8w0rsmr4slw::::res://pinball.tscn<>uid://b6pkk42c4pey5::::res://launcher.gd<>uid://c443f05wpcse7::::res://pinball.gd
+Lflipper.gd::GDScript::6291663954680465456::1793829611::0::1::::<>RigidBody2D<><>0<>0<><>::
+Lflipper.tscn::PackedScene::4460544105773860424::1793829611::0::1::::<><><>0<>0<><>::uid://cvvy1y0jchvxw::::res://Lflipper.gd<>uid://cger0aafyu05i::::res://Untitled_Artwork 32.png
+pinball.gd::GDScript::6869895152971470256::1793829611::0::1::::<>RigidBody2D<><>0<>0<><>::
+Pinball.png::CompressedTexture2D::5396281217008372167::1793829611::1793829638::1::::<><><>0<>0<>e701a4494460537ad70b0419594479d5<>res://.godot/imported/Pinball.png-22c2ac9b5d9fc4e5cf8ceeec82def468.ctex::
+pinball.tscn::PackedScene::4842347173231195084::1793829611::0::1::::<><><>0<>0<><>::uid://ci4870rdbv1w2::::res://Pinball.png
+README.txt::TextFile::-1::1793829611::0::1::::<><><>0<>0<><>::
+Rflipper.gd::GDScript::7582845971774068321::1793829611::0::1::::<>RigidBody2D<><>0<>0<><>::
+Rflipper.tscn::PackedScene::8145136591129830341::1793829611::0::1::::<><><>0<>0<><>::uid://dgbgmoji1rnnl::::res://Rflipper.gd<>uid://cger0aafyu05i::::res://Untitled_Artwork 32.png
+Untitled_Artwork 32 copy 4.png::CompressedTexture2D::5758717849973100857::1793829611::1793829638::1::::<><><>0<>0<>96f3a84fc881b96789bb2491a822fa64<>res://.godot/imported/Untitled_Artwork 32 copy 4.png-6825e889feaefa4686a30e72799f995c.ctex::
+Untitled_Artwork 32 copy 5.png::CompressedTexture2D::6024079014490777970::1793829611::1793829638::1::::<><><>0<>0<>74aa1ff0c6e12412c603596029c208c7<>res://.godot/imported/Untitled_Artwork 32 copy 5.png-bb9cff850be04b687d1ab94640b8ec04.ctex::
+Untitled_Artwork 32 copy 6.png::CompressedTexture2D::5078711181785206872::1793829611::1793829638::1::::<><><>0<>0<>f36a494fcc4a63ae2052b77fb4c90301<>res://.godot/imported/Untitled_Artwork 32 copy 6.png-7a4a322b844071a57b148efb671edf11.ctex::
+Untitled_Artwork 32 copy.png::CompressedTexture2D::6864519623115518545::1793829611::1793829638::1::::<><><>0<>0<>f075e53b5079ffa79af56e7e2d24e4d5<>res://.godot/imported/Untitled_Artwork 32 copy.png-bc1318dba40dfcd862d6e90c12ccddc9.ctex::
+Untitled_Artwork 32.png::CompressedTexture2D::5203308774215353000::1793829611::1793829638::1::::<><><>0<>0<>7e71cce01c0615e0b4a4b05364a4fb9b<>res://.godot/imported/Untitled_Artwork 32.png-bc3b41f52c83155222bbf7b830bf204b.ctex::
