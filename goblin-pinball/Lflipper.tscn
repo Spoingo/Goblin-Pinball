@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4syrlimqb3y7"]
+
+[ext_resource type="Script" uid="uid://cvvy1y0jchvxw" path="res://Lflipper.gd" id="1_yfokh"]
+[ext_resource type="Texture2D" uid="uid://cger0aafyu05i" path="res://Untitled_Artwork 32.png" id="2_bwebg"]
+
+[node name="LFlipper" type="RigidBody2D" unique_id=1312005050]
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_yfokh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=564518189]
+position = Vector2(0.30000305, -0.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bwebg")
+offset = Vector2(110.399994, 16)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1461655417]
+position = Vector2(55.499996, 7.499996)
+polygon = PackedVector2Array(30.800003, -38.999996, 69.8, -27.999996, 95.8, -14.999996, 99.8, -6.999996, 94.8, 2.0000038, 84.8, 8.000004, 58.800003, 18.000004, 24.800003, 26.000004, -21.199997, 27.000004, -87.2, -0.9999962, -83.2, -25.999996, -71.2, -37.999996, -59.199997, -40.999996)

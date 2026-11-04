@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://bxy6084lormh4"]
+
+[ext_resource type="Script" uid="uid://d3oqari8wbkbb" path="res://level.gd" id="1_1ainy"]
+[ext_resource type="Texture2D" uid="uid://cemfvpu6fuoge" path="res://Untitled_Artwork 32 copy 6.png" id="2_km5ld"]
+[ext_resource type="Texture2D" uid="uid://cr3dx3vr4j3w5" path="res://Untitled_Artwork 32 copy 5.png" id="2_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://5adapfc6lmd6" path="res://flippers.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://ca8w0rsmr4slw" path="res://pinball.tscn" id="3_0b4ue"]
+[ext_resource type="Script" uid="uid://b6pkk42c4pey5" path="res://launcher.gd" id="4_0b4ue"]
+[ext_resource type="Script" uid="uid://c443f05wpcse7" path="res://pinball.gd" id="4_f2txt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdxpe"]
+friction = 0.15
+bounce = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdkos"]
+size = Vector2(46, 1079)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(46, 1089)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ainy"]
+size = Vector2(1124, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmrx4"]
+size = Vector2(169.0311, 15.256783)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hifvt"]
+size = Vector2(177.41895, 16.883057)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0b4ue"]
+friction = 0.0
+bounce = 0.1
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yajlg"]
+size = Vector2(85, 54.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4kl7"]
+size = Vector2(143.39813, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8gmq"]
+size = Vector2(123, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6hdu"]
+size = Vector2(143.95251, 21.697418)
+
+[node name="Level" type="Node2D" unique_id=1410075348]
+script = ExtResource("1_1ainy")
+
+[node name="Background1" type="ColorRect" parent="." unique_id=854758021]
+offset_right = 1080.0
+offset_bottom = 1080.0
+color = Color(0.1412707, 0.33618638, 0.06590511, 1)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1860884237]
+physics_material_override = SubResource("PhysicsMaterial_vdxpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=159911363]
+position = Vector2(-23, 539.5)
+shape = SubResource("RectangleShape2D_rdkos")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1222427182]
+position = Vector2(1103, 543.5)
+shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=326940578]
+position = Vector2(522, -41)
+shape = SubResource("RectangleShape2D_1ainy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=2001635149]
+position = Vector2(14, 905)
+polygon = PackedVector2Array(-17, -205, 22, 4, 65, 92, 138, 138, 227, 159, 351, 186, 394, 209, 381, 229, -13, 189)
+
+[node name="LauncherWall" type="CollisionPolygon2D" parent="Walls" unique_id=1674797040]
+position = Vector2(1065, 896)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-17, -138, 49, 65, 76, 103, 144, 154, 276, 176, 460, 185, 394, 195, -13, 189)
+disabled = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls" unique_id=1357795173]
+position = Vector2(912, 3)
+rotation = -1.5707964
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-17, -138, 49, 65, 76, 103, 133, 137, 335, 159, 395, 175, 394, 195, -13, 189)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls" unique_id=1543944690]
+position = Vector2(152, 803)
+polygon = PackedVector2Array(10, -34, 66, 43, 137, 84, 191, 142, 153, 154, 66, 141, 3, 81, -20, -16, -20, -52)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls" unique_id=1809577682]
+position = Vector2(925, 804)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(65, 42, 145, 90, 183, 138, 112, 153, 42, 130, 3, 82, -19, 14, -19, -53, 13, -35)
+
+[node name="LBumper" type="Area2D" parent="." unique_id=1782239140]
+position = Vector2(240, 870)
+
+[node name="BumpSprite" type="Sprite2D" parent="LBumper" unique_id=941024480]
+visible = false
+position = Vector2(-39, -39)
+rotation = 3.1415925
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_km5ld")
+
+[node name="Sprite2D" type="Sprite2D" parent="LBumper" unique_id=1469359808]
+rotation = -3.1415925
+scale = Vector2(1, -1)
+texture = ExtResource("2_n6hdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LBumper" unique_id=15272606]
+position = Vector2(-21.151962, -36.27411)
+rotation = -2.390367
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_lmrx4")
+one_way_collision = true
+
+[node name="RBumper" type="Area2D" parent="." unique_id=1399877953]
+position = Vector2(840, 870)
+
+[node name="Sprite2D" type="Sprite2D" parent="RBumper" unique_id=306952790]
+texture = ExtResource("2_n6hdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RBumper" unique_id=1374320759]
+position = Vector2(12.508484, -31.8208)
+rotation = 2.38155
+shape = SubResource("RectangleShape2D_hifvt")
+one_way_collision = true
+
+[node name="BumpSprite" type="Sprite2D" parent="RBumper" unique_id=1019970597]
+
+[node name="flippers" parent="." unique_id=617354247 instance=ExtResource("2_vonw3")]
+position = Vector2(343, 970)
+
+[node name="Pinball" parent="." unique_id=250632057 instance=ExtResource("3_0b4ue")]
+position = Vector2(1035, 957)
+script = ExtResource("4_f2txt")
+
+[node name="Launcher" type="RigidBody2D" parent="." unique_id=1246881730]
+position = Vector2(1041, 1080)
+physics_material_override = SubResource("PhysicsMaterial_0b4ue")
+freeze = true
+freeze_mode = 1
+script = ExtResource("4_0b4ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Launcher" unique_id=1386871521]
+position = Vector2(-4, -17.75)
+shape = SubResource("RectangleShape2D_yajlg")
+
+[node name="LaunchBlock" type="RigidBody2D" parent="." unique_id=851335782]
+position = Vector2(1092, 658)
+rotation = -1.2217305
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaunchBlock" unique_id=247818019]
+position = Vector2(-61.699036, 0)
+shape = SubResource("RectangleShape2D_u4kl7")
+
+[node name="ColorRect" type="ColorRect" parent="LaunchBlock" unique_id=1051295708]
+offset_left = -133.73839
+offset_top = -9.749237
+offset_right = 8.880936
+offset_bottom = 11.250763
+pivot_offset = Vector2(124.97766, 9.8479)
+color = Color(0.32156864, 0.15686275, 0.09411765, 1)
+
+[node name="Timer" type="Timer" parent="LaunchBlock" unique_id=665741599]
+wait_time = 5.0
+one_shot = true
+
+[node name="LaunchDetect" type="Area2D" parent="." unique_id=1835291397]
+position = Vector2(1005, 622)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaunchDetect" unique_id=2115702784]
+position = Vector2(13, 14)
+shape = SubResource("RectangleShape2D_f8gmq")
+
+[node name="UI" type="Control" parent="." unique_id=1457373358]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1260.0
+offset_top = 62.0
+offset_right = 1260.0
+offset_bottom = 62.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=87303752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer" unique_id=928849666]
+layout_mode = 2
+text = "Points"
+
+[node name="Label2" type="Label" parent="UI/VBoxContainer" unique_id=1713843476]
+layout_mode = 2
+text = "Points"
+
+[node name="FlickBlock" type="RigidBody2D" parent="." unique_id=392595880]
+position = Vector2(1093.9999, 359)
+rotation = 0.60651064
+freeze = true
+freeze_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="FlickBlock" unique_id=1126108678]
+offset_left = -134.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 12.0
+color = Color(0.32156864, 0.15686275, 0.09411765, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlickBlock" unique_id=1737899128]
+position = Vector2(-61.975952, 0.84869385)
+shape = SubResource("RectangleShape2D_n6hdu")
+
+[node name="FlickBlockTimer" type="Timer" parent="FlickBlock" unique_id=561197197]
+one_shot = true
+
+[node name="BlockBlock" type="RigidBody2D" parent="." unique_id=1653693759]
+
+[connection signal="body_entered" from="LBumper" to="." method="_on_Lbumper_body_entered"]
+[connection signal="body_entered" from="RBumper" to="." method="_on_Rbumper_body_entered"]
+[connection signal="timeout" from="LaunchBlock/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="LaunchDetect" to="." method="_on_launch_detect_body_entered"]
+[connection signal="timeout" from="FlickBlock/FlickBlockTimer" to="." method="_on_flick_block_timer_timeout"]
