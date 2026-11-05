@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ca8w0rsmr4slw" path="res://pinball.tscn" id="3_0b4ue"]
 [ext_resource type="Script" uid="uid://b6pkk42c4pey5" path="res://launcher.gd" id="4_0b4ue"]
 [ext_resource type="Script" uid="uid://c443f05wpcse7" path="res://pinball.gd" id="4_f2txt"]
+[ext_resource type="Texture2D" uid="uid://duq7autw1iu2j" path="res://IMG_0069.png" id="8_km5ld"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdxpe"]
 friction = 0.15
@@ -25,7 +26,7 @@ size = Vector2(1124, 80)
 size = Vector2(169.0311, 15.256783)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hifvt"]
-size = Vector2(177.41895, 16.883057)
+size = Vector2(164.60858, 16.883057)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0b4ue"]
 friction = 0.0
@@ -60,7 +61,7 @@ position = Vector2(-23, 539.5)
 shape = SubResource("RectangleShape2D_rdkos")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1222427182]
-position = Vector2(1103, 543.5)
+position = Vector2(1103, 547)
 shape = SubResource("RectangleShape2D_f2txt")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=326940578]
@@ -74,14 +75,7 @@ polygon = PackedVector2Array(-17, -205, 22, 4, 65, 92, 138, 138, 227, 159, 351, 
 [node name="LauncherWall" type="CollisionPolygon2D" parent="Walls" unique_id=1674797040]
 position = Vector2(1065, 896)
 scale = Vector2(-1, 1)
-polygon = PackedVector2Array(-17, -138, 49, 65, 76, 103, 144, 154, 276, 176, 460, 185, 394, 195, -13, 189)
-disabled = true
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls" unique_id=1357795173]
-position = Vector2(912, 3)
-rotation = -1.5707964
-scale = Vector2(-1, 1)
-polygon = PackedVector2Array(-17, -138, 49, 65, 76, 103, 133, 137, 335, 159, 395, 175, 394, 195, -13, 189)
+polygon = PackedVector2Array(73, 139, 98, 151, 156, 168, 276, 176, 460, 185, 394, 195, 73, 192)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls" unique_id=1543944690]
 position = Vector2(152, 803)
@@ -117,25 +111,31 @@ one_way_collision = true
 [node name="RBumper" type="Area2D" parent="." unique_id=1399877953]
 position = Vector2(840, 870)
 
+[node name="BumpSprite" type="Sprite2D" parent="RBumper" unique_id=1019970597]
+visible = false
+position = Vector2(7, -7)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_km5ld")
+
 [node name="Sprite2D" type="Sprite2D" parent="RBumper" unique_id=306952790]
 texture = ExtResource("2_n6hdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RBumper" unique_id=1374320759]
-position = Vector2(12.508484, -31.8208)
+position = Vector2(17.151001, -36.23358)
 rotation = 2.38155
 shape = SubResource("RectangleShape2D_hifvt")
 one_way_collision = true
-
-[node name="BumpSprite" type="Sprite2D" parent="RBumper" unique_id=1019970597]
 
 [node name="flippers" parent="." unique_id=617354247 instance=ExtResource("2_vonw3")]
 position = Vector2(343, 970)
 
 [node name="Pinball" parent="." unique_id=250632057 instance=ExtResource("3_0b4ue")]
-position = Vector2(1035, 957)
+position = Vector2(1035, 994)
 script = ExtResource("4_f2txt")
 
 [node name="Launcher" type="RigidBody2D" parent="." unique_id=1246881730]
+z_index = 1
 position = Vector2(1041, 1080)
 physics_material_override = SubResource("PhysicsMaterial_0b4ue")
 freeze = true
@@ -146,9 +146,41 @@ script = ExtResource("4_0b4ue")
 position = Vector2(-4, -17.75)
 shape = SubResource("RectangleShape2D_yajlg")
 
+[node name="Spring" type="VBoxContainer" parent="Launcher" unique_id=1888192016]
+offset_left = 41.0
+offset_top = 31.0
+offset_right = 620.0
+offset_bottom = 652.0
+scale = Vector2(-0.15, -0.15)
+theme_override_constants/separation = -117
+
+[node name="TextureRect" type="TextureRect" parent="Launcher/Spring" unique_id=1418753130]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, -1)
+texture = ExtResource("8_km5ld")
+
+[node name="TextureRect2" type="TextureRect" parent="Launcher/Spring" unique_id=1911220161]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, -1)
+texture = ExtResource("8_km5ld")
+
+[node name="TextureRect3" type="TextureRect" parent="Launcher/Spring" unique_id=1962585360]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, -1)
+texture = ExtResource("8_km5ld")
+
+[node name="TextureRect4" type="TextureRect" parent="Launcher/Spring" unique_id=74990070]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, -1)
+texture = ExtResource("8_km5ld")
+
 [node name="LaunchBlock" type="RigidBody2D" parent="." unique_id=851335782]
 position = Vector2(1092, 658)
-rotation = -1.2217305
+rotation = -1.2297168
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaunchBlock" unique_id=247818019]
@@ -164,6 +196,27 @@ pivot_offset = Vector2(124.97766, 9.8479)
 color = Color(0.32156864, 0.15686275, 0.09411765, 1)
 
 [node name="Timer" type="Timer" parent="LaunchBlock" unique_id=665741599]
+wait_time = 5.0
+one_shot = true
+
+[node name="LaunchBlock2" type="RigidBody2D" parent="." unique_id=1776477419]
+position = Vector2(-8, 658)
+rotation = -2.5132742
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaunchBlock2" unique_id=1001430846]
+position = Vector2(-61.699036, 0)
+shape = SubResource("RectangleShape2D_u4kl7")
+
+[node name="ColorRect" type="ColorRect" parent="LaunchBlock2" unique_id=130253361]
+offset_left = -133.73839
+offset_top = -9.749237
+offset_right = 8.880936
+offset_bottom = 11.250763
+pivot_offset = Vector2(124.97766, 9.8479)
+color = Color(0.32156864, 0.15686275, 0.09411765, 1)
+
+[node name="Timer" type="Timer" parent="LaunchBlock2" unique_id=831895100]
 wait_time = 5.0
 one_shot = true
 
@@ -223,5 +276,6 @@ one_shot = true
 [connection signal="body_entered" from="LBumper" to="." method="_on_Lbumper_body_entered"]
 [connection signal="body_entered" from="RBumper" to="." method="_on_Rbumper_body_entered"]
 [connection signal="timeout" from="LaunchBlock/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="LaunchBlock2/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="LaunchDetect" to="." method="_on_launch_detect_body_entered"]
 [connection signal="timeout" from="FlickBlock/FlickBlockTimer" to="." method="_on_flick_block_timer_timeout"]

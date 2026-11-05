@@ -6,23 +6,25 @@ var ball_in_launcher = true
 
 func _process(delta: float) -> void:
 	if ball_in_launcher:
-		$Walls/LauncherWall.disabled = true
 		$LaunchDetect.monitoring = true
 		$LaunchBlock.rotation_degrees = -90
+		$LaunchBlock2.rotation_degrees = -90
 		$FlickBlock.rotation_degrees = 55
+
 	else:
-		$Walls/LauncherWall.disabled = false
 		$LaunchDetect.monitoring = false
 
 
 func _on_timer_timeout() -> void:
 	$LaunchBlock.rotation_degrees = -70
+	$LaunchBlock2.rotation_degrees = -90
 
 
 func _on_launch_detect_body_entered(body: Node2D) -> void:
 	if body == pinball:
 		ball_in_launcher = false
 		$LaunchBlock.rotation_degrees = -34
+		$LaunchBlock2.rotation_degrees = -144
 		$LaunchBlock/Timer.start()
 		$FlickBlock/FlickBlockTimer.start()
 
@@ -58,7 +60,19 @@ func _on_Rbumper_body_entered(body: Node2D) -> void:
 		if incoming_velocity_component < 0:
 			body.linear_velocity -= push_dir * incoming_velocity_component
 		body.apply_central_impulse(push_dir * bounce_strength)
+		
+		$RBumper/BumpSprite.visible = true
+		await get_tree().create_timer(0.1).timeout
+		$RBumper/BumpSprite.visible = false
 
 
 func _on_flick_block_timer_timeout() -> void:
 	$FlickBlock.rotation_degrees = 90
+
+
+func new_ball():
+	var ball = load("res://pinball.tscn").instantiate()
+	pinball = ball
+	ball.global_position = Vector2(1035,990)
+	ball_in_launcher = true
+	add_child(ball)

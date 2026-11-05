@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ca8w0rsmr4slw"]
 
+[ext_resource type="Script" uid="uid://c443f05wpcse7" path="res://pinball.gd" id="1_e78sp"]
 [ext_resource type="Texture2D" uid="uid://ci4870rdbv1w2" path="res://Pinball.png" id="1_vdxpe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oi3di"]
@@ -16,6 +17,7 @@ gravity_scale = 1.5
 can_sleep = false
 lock_rotation = true
 continuous_cd = 2
+script = ExtResource("1_e78sp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=713028101]
 scale = Vector2(0.3, 0.3)

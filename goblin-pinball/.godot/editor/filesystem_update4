@@ -1,2 +1,5 @@
 res://level.tscn
 res://pinball.gd
+res://level.gd
+res://pinball.tscn
+res://launcher.gd
