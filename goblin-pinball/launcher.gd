@@ -21,3 +21,6 @@ func _physics_process(delta: float) -> void:
 		elif position.y <= rest_ypos:
 			position.y = rest_ypos
 			pull_rate = rest_pull_rate
+		print(((rest_ypos)-position.y))
+		var amount = clampf(((rest_ypos)-position.y) / -40.0, 0.0, 1.0)
+		get_parent().spring_compression(amount)

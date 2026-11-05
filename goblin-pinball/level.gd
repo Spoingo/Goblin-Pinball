@@ -10,6 +10,7 @@ func _process(delta: float) -> void:
 		$LaunchBlock.rotation_degrees = -90
 		$LaunchBlock2.rotation_degrees = -90
 		$FlickBlock.rotation_degrees = 55
+		
 
 	else:
 		$LaunchDetect.monitoring = false
@@ -68,6 +69,12 @@ func _on_Rbumper_body_entered(body: Node2D) -> void:
 
 func _on_flick_block_timer_timeout() -> void:
 	$FlickBlock.rotation_degrees = 90
+
+func spring_compression(amount: float) -> void:
+	$Spring.add_theme_constant_override(
+		"separation",
+		roundi(lerpf(-117, -200, clampf(amount, 0.0, 1.0)))
+	)
 
 
 func new_ball():

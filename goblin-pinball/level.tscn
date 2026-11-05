@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://5adapfc6lmd6" path="res://flippers.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://ca8w0rsmr4slw" path="res://pinball.tscn" id="3_0b4ue"]
 [ext_resource type="Script" uid="uid://b6pkk42c4pey5" path="res://launcher.gd" id="4_0b4ue"]
-[ext_resource type="Script" uid="uid://c443f05wpcse7" path="res://pinball.gd" id="4_f2txt"]
 [ext_resource type="Texture2D" uid="uid://duq7autw1iu2j" path="res://IMG_0069.png" id="8_km5ld"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdxpe"]
@@ -132,7 +131,6 @@ position = Vector2(343, 970)
 
 [node name="Pinball" parent="." unique_id=250632057 instance=ExtResource("3_0b4ue")]
 position = Vector2(1035, 994)
-script = ExtResource("4_f2txt")
 
 [node name="Launcher" type="RigidBody2D" parent="." unique_id=1246881730]
 z_index = 1
@@ -146,33 +144,37 @@ script = ExtResource("4_0b4ue")
 position = Vector2(-4, -17.75)
 shape = SubResource("RectangleShape2D_yajlg")
 
-[node name="Spring" type="VBoxContainer" parent="Launcher" unique_id=1888192016]
-offset_left = 41.0
-offset_top = 31.0
-offset_right = 620.0
-offset_bottom = 652.0
+[node name="Spring" type="VBoxContainer" parent="." unique_id=1888192016]
+z_index = 2
+offset_left = 1082.0
+offset_top = 1111.0
+offset_right = 1661.0
+offset_bottom = 1732.0
 scale = Vector2(-0.15, -0.15)
 theme_override_constants/separation = -117
 
-[node name="TextureRect" type="TextureRect" parent="Launcher/Spring" unique_id=1418753130]
+[node name="TextureRect" type="TextureRect" parent="Spring" unique_id=1418753130]
+z_index = 3
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(-1, -1)
 texture = ExtResource("8_km5ld")
 
-[node name="TextureRect2" type="TextureRect" parent="Launcher/Spring" unique_id=1911220161]
+[node name="TextureRect2" type="TextureRect" parent="Spring" unique_id=1911220161]
+z_index = 2
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(-1, -1)
 texture = ExtResource("8_km5ld")
 
-[node name="TextureRect3" type="TextureRect" parent="Launcher/Spring" unique_id=1962585360]
+[node name="TextureRect3" type="TextureRect" parent="Spring" unique_id=1962585360]
+z_index = 1
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(-1, -1)
 texture = ExtResource("8_km5ld")
 
-[node name="TextureRect4" type="TextureRect" parent="Launcher/Spring" unique_id=74990070]
+[node name="TextureRect4" type="TextureRect" parent="Spring" unique_id=74990070]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(-1, -1)
