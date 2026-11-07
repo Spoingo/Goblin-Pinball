@@ -1,32 +1,46 @@
 [gd_scene format=3 uid="uid://5adapfc6lmd6"]
 
 [ext_resource type="Script" uid="uid://cledupjga0sgw" path="res://flippers.gd" id="1_4mnnx"]
-[ext_resource type="Texture2D" uid="uid://cger0aafyu05i" path="res://Untitled_Artwork 32.png" id="2_wwn2e"]
+[ext_resource type="Texture2D" uid="uid://dc71kx25vbqga" path="res://Untitled_Artwork 32 copy 3.png" id="2_4mnnx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmrx4"]
+radius = 13.034645
+height = 161.20041
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwn2e"]
+radius = 13.034645
+height = 161.20041
 
 [node name="flippers" type="Node2D" unique_id=617354247]
 script = ExtResource("1_4mnnx")
 
 [node name="Lflipper" type="AnimatableBody2D" parent="." unique_id=1871711991]
+position = Vector2(4.000001, 0)
+rotation = 0.34906584
 
 [node name="Sprite2D" type="Sprite2D" parent="Lflipper" unique_id=1376592014]
-position = Vector2(0.30000305, -0.5)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_wwn2e")
-offset = Vector2(110.399994, 16)
+position = Vector2(1, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_4mnnx")
+offset = Vector2(85, -7)
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Lflipper" unique_id=503718995]
-position = Vector2(55.499996, 7.499996)
-polygon = PackedVector2Array(33.500004, -37.499996, 97.5, -11.499996, -69.5, -6.499996, -74.5, -32.499996, -58.499996, -37.499996)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lflipper" unique_id=102400243]
+position = Vector2(64.00001, -13)
+rotation = 1.6715881
+shape = SubResource("CapsuleShape2D_lmrx4")
 
 [node name="Rflipper" type="AnimatableBody2D" parent="." unique_id=907746899]
-position = Vector2(400, 0)
+position = Vector2(396, 0)
+rotation = -0.34906584
+scale = Vector2(-1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Rflipper" unique_id=2087896550]
-position = Vector2(0.30000305, -0.5)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_wwn2e")
-offset = Vector2(110.399994, 16)
+position = Vector2(1, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_4mnnx")
+offset = Vector2(85, -7)
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Rflipper" unique_id=685740905]
-position = Vector2(55.499996, 7.499996)
-polygon = PackedVector2Array(30.800003, -38.999996, 69.8, -27.999996, 95.8, -14.999996, 99.8, -6.999996, 94.8, 2.0000038, 84.8, 8.000004, 58.800003, 18.000004, 24.800003, 26.000004, -21.199997, 27.000004, -87.2, -0.9999962, -83.2, -25.999996, -71.2, -37.999996, -59.199997, -40.999996)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rflipper" unique_id=2059325013]
+position = Vector2(64, -13)
+rotation = 1.6720254
+shape = SubResource("CapsuleShape2D_wwn2e")

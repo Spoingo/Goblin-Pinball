@@ -2,9 +2,15 @@ extends Node2D
 
 @onready var pinball = find_child("Pinball")
 
+@onready var pinball_y_location = 0
+
+var wiping_screen = false
+var wipe_point = 0
+
 var ball_in_launcher = true
 
 func _process(delta: float) -> void:
+	pinball_y_location = pinball.global_position.y + 45
 	if ball_in_launcher:
 		$LaunchDetect.monitoring = true
 		$LaunchBlock.rotation_degrees = -90
@@ -14,20 +20,29 @@ func _process(delta: float) -> void:
 
 	else:
 		$LaunchDetect.monitoring = false
-
+	
+	if Input.is_action_pressed("Lshift") and Input.is_action_pressed("Rshift"):
+		if $wipe.is_stopped():
+			$wipe.start(1.0)
+	elif !$wipe.is_stopped():
+		$wipe.stop()
+	if wiping_screen:
+		wipe_screen(delta)
 
 func _on_timer_timeout() -> void:
-	$LaunchBlock.rotation_degrees = -70
+	$LaunchBlock.rotation_degrees = -84
 	$LaunchBlock2.rotation_degrees = -90
 
 
 func _on_launch_detect_body_entered(body: Node2D) -> void:
 	if body == pinball:
 		ball_in_launcher = false
-		$LaunchBlock.rotation_degrees = -34
-		$LaunchBlock2.rotation_degrees = -144
+		$LaunchBlock.rotation_degrees = -44
+		$LaunchBlock2.rotation_degrees = -140
+		#$CenterRiser.position.y = 1047
 		$LaunchBlock/Timer.start()
 		$FlickBlock/FlickBlockTimer.start()
+		#$CenterRiser/RiserTimer.start()
 
 
 func _on_Lbumper_body_entered(body: Node2D) -> void:
@@ -83,3 +98,26 @@ func new_ball():
 	ball.global_position = Vector2(1035,990)
 	ball_in_launcher = true
 	add_child(ball)
+
+
+func _on_riser_timer_timeout() -> void:
+	$CenterRiser.position.y = 1847
+
+
+func wipe_screen(delta):
+	if wipe_point <= get_window().size.x:
+		wipe_point += 200*delta
+		$Wiper.position.x = wipe_point
+		for enemy in $Enemies.get_children():
+			if wipe_point >= enemy.global_position.x:
+				if enemy.dead:
+					enemy.wipe()
+	else:
+		wipe_point = 0
+		$Wiper.position.x = wipe_point - $Wiper.size.x
+		wiping_screen = false
+
+
+func _on_wipe_timeout() -> void:
+	wipe_point = 0
+	wiping_screen = true

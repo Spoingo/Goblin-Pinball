@@ -7,7 +7,7 @@ var max_extend = 200
 var rest_ypos = 1080
 
 func _physics_process(delta: float) -> void:
-	if get_parent().ball_in_launcher:
+	if $Area2D.has_overlapping_bodies():
 		if Input.is_action_pressed("Rshift"):
 			if position.y < rest_ypos+max_extend:
 				pull_rate *= .97
@@ -15,12 +15,10 @@ func _physics_process(delta: float) -> void:
 			else:
 				position.y = rest_ypos+max_extend
 		elif position.y > rest_ypos:
-			print(rest_pull_rate-pull_rate)
 			snap_rate = (rest_pull_rate-pull_rate)*15
 			position.y -= snap_rate*delta
 		elif position.y <= rest_ypos:
 			position.y = rest_ypos
 			pull_rate = rest_pull_rate
-		print(((rest_ypos)-position.y))
 		var amount = clampf(((rest_ypos)-position.y) / -40.0, 0.0, 1.0)
 		get_parent().spring_compression(amount)
