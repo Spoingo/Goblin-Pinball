@@ -8,3 +8,5 @@ Goblins. Look at them, really take them in. Vile, disgusting creatures. You need
 -tap left shift for the left flipper, right shift for the right flipper
 
 -kill
+
+-hold both shift keys for a second to wipe the screen
