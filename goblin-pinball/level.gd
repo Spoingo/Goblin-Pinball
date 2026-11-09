@@ -4,10 +4,18 @@ extends Node2D
 
 @onready var pinball_y_location = 0
 
+var wave = 1
+
 var wiping_screen = false
 var wipe_point = 0
 
 var ball_in_launcher = true
+
+var enemy_count = 0
+
+
+func _ready() -> void:
+	spawn_wave()
 
 func _process(delta: float) -> void:
 	pinball_y_location = pinball.global_position.y + 45
@@ -16,10 +24,14 @@ func _process(delta: float) -> void:
 		$LaunchBlock.rotation_degrees = -90
 		$LaunchBlock2.rotation_degrees = -90
 		$FlickBlock.rotation_degrees = 55
-		
+	
+	
 
 	else:
 		$LaunchDetect.monitoring = false
+	if enemy_count <= 1:
+		wave += 1
+		spawn_wave()
 	
 	if Input.is_action_pressed("Lshift") and Input.is_action_pressed("Rshift"):
 		if $wipe.is_stopped():
@@ -116,6 +128,29 @@ func wipe_screen(delta):
 		wipe_point = 0
 		$Wiper.position.x = wipe_point - $Wiper.size.x
 		wiping_screen = false
+
+func spawn_wave():
+	var wave_spawns = []
+	#if wave == 1:
+	wave_spawns = [
+		#[nodepath,position]
+		["res://peon.tscn",Vector2(150,275)],
+		["res://peon.tscn",Vector2(300,390)],
+		["res://peon.tscn",Vector2(450,275)],
+		["res://peon.tscn",Vector2(600,390)],
+		["res://peon.tscn",Vector2(750,275)]
+	]
+	enemy_count += wave_spawns.size()
+	print(wave_spawns.size())
+	
+	for enemy in wave_spawns:
+		var enemy_spawn = load(enemy[0]).instantiate()
+		enemy_spawn.spawn_position = enemy[1]
+		enemy_spawn.position = enemy[1]
+		enemy_spawn.position.y = -4
+		$Enemies.add_child(enemy_spawn)
+	
+
 
 
 func _on_wipe_timeout() -> void:

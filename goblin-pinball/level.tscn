@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://bxy6084lormh4"]
 
 [ext_resource type="Script" uid="uid://d3oqari8wbkbb" path="res://level.gd" id="1_1ainy"]
-[ext_resource type="Texture2D" uid="uid://cemfvpu6fuoge" path="res://Untitled_Artwork 32 copy 6.png" id="2_km5ld"]
-[ext_resource type="Texture2D" uid="uid://cr3dx3vr4j3w5" path="res://Untitled_Artwork 32 copy 5.png" id="2_n6hdu"]
+[ext_resource type="Texture2D" uid="uid://cemfvpu6fuoge" path="res://Assets/Bumper_internal.png" id="2_km5ld"]
+[ext_resource type="Texture2D" uid="uid://cr3dx3vr4j3w5" path="res://Assets/Bumper.png" id="2_n6hdu"]
 [ext_resource type="PackedScene" uid="uid://5adapfc6lmd6" path="res://flippers.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://ca8w0rsmr4slw" path="res://pinball.tscn" id="3_0b4ue"]
 [ext_resource type="Script" uid="uid://b6pkk42c4pey5" path="res://launcher.gd" id="4_0b4ue"]
 [ext_resource type="Texture2D" uid="uid://ci4870rdbv1w2" path="res://Pinball.png" id="8_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://duq7autw1iu2j" path="res://IMG_0069.png" id="8_km5ld"]
-[ext_resource type="PackedScene" uid="uid://dp7oabstfn24n" path="res://peon.tscn" id="9_i2t4f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdxpe"]
 friction = 0.15
@@ -167,7 +166,7 @@ position = Vector2(-4, -17.5)
 shape = SubResource("RectangleShape2D_2ekxb")
 
 [node name="Spring" type="VBoxContainer" parent="." unique_id=1888192016]
-z_index = 2
+z_index = 4
 offset_left = 1082.0
 offset_top = 1111.0
 offset_right = 1661.0
@@ -252,6 +251,7 @@ position = Vector2(13, 14)
 shape = SubResource("RectangleShape2D_f8gmq")
 
 [node name="UI" type="Control" parent="." unique_id=1457373358]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1260.0
@@ -316,15 +316,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1104772433]
-
-[node name="Peon" parent="Enemies" unique_id=1912169604 instance=ExtResource("9_i2t4f")]
-position = Vector2(482, 446)
-
-[node name="Peon2" parent="Enemies" unique_id=136263441 instance=ExtResource("9_i2t4f")]
-position = Vector2(338, 522)
-
-[node name="Peon3" parent="Enemies" unique_id=1297509890 instance=ExtResource("9_i2t4f")]
-position = Vector2(632, 552)
+y_sort_enabled = true
 
 [node name="wipe" type="Timer" parent="." unique_id=953935172]
 one_shot = true

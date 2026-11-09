@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5adapfc6lmd6"]
 
 [ext_resource type="Script" uid="uid://cledupjga0sgw" path="res://flippers.gd" id="1_4mnnx"]
-[ext_resource type="Texture2D" uid="uid://dc71kx25vbqga" path="res://Untitled_Artwork 32 copy 3.png" id="2_4mnnx"]
+[ext_resource type="Texture2D" uid="uid://dc71kx25vbqga" path="res://Assets/Flipper.png" id="2_4mnnx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmrx4"]
 radius = 13.034645

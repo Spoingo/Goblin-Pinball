@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cemfvpu6fuoge"
-path="res://.godot/imported/Untitled_Artwork 32 copy 6.png-7a4a322b844071a57b148efb671edf11.ctex"
+uid="uid://dc71kx25vbqga"
+path="res://.godot/imported/Flipper.png-9195486fa237f1e85b4456183f34c773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Untitled_Artwork 32 copy 6.png"
-dest_files=["res://.godot/imported/Untitled_Artwork 32 copy 6.png-7a4a322b844071a57b148efb671edf11.ctex"]
+source_file="res://Assets/Flipper.png"
+dest_files=["res://.godot/imported/Flipper.png-9195486fa237f1e85b4456183f34c773.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dp7oabstfn24n"]
 
 [ext_resource type="Script" uid="uid://c78ygm4v0qwau" path="res://peon.gd" id="1_1jjwk"]
-[ext_resource type="Texture2D" uid="uid://cger0aafyu05i" path="res://Untitled_Artwork 32.png" id="1_ksfh5"]
-[ext_resource type="Texture2D" uid="uid://cx37na05qwmb8" path="res://Untitled_Artwork 40.png" id="2_1jjwk"]
-[ext_resource type="Texture2D" uid="uid://didcrnwf1v1os" path="res://Untitled_Artwork 42.png" id="3_2ovaq"]
+[ext_resource type="Texture2D" uid="uid://cger0aafyu05i" path="res://Assets/Goblins/Peon_Walk1.png" id="1_ksfh5"]
+[ext_resource type="Texture2D" uid="uid://cx37na05qwmb8" path="res://Assets/Goblins/Peon_Walk2.png" id="2_1jjwk"]
+[ext_resource type="Texture2D" uid="uid://bvga1fvorf35g" path="res://Untitled_Artwork 42 copy 3.png" id="4_1jjwk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rdkos"]
 animations = [{
@@ -43,7 +43,8 @@ offset = Vector2(154.99998, 119.999985)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904318821]
 visible = false
-texture = ExtResource("3_2ovaq")
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_1jjwk")
 offset = Vector2(72, -71)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1444027500]
