@@ -1,28 +1,36 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1794186684
+::res://::1794433826
 flippers.gd::GDScript::5553394827304302834::1793858241::0::1::::<>Node2D<><>0<>0<><>::
 flippers.tscn::PackedScene::2105848255826288765::1794032283::0::1::::<><><>0<>0<><>::uid://cledupjga0sgw::::res://flippers.gd<>uid://dc71kx25vbqga::::res://Assets/Flipper.png
 icon.svg::CompressedTexture2D::5257175247942339948::1793829611::1793829638::1::::<><><>0<>0<>99a5c5e03e52ca7adbcc6f3572be33a7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 IMG_0069.png::CompressedTexture2D::8598012992526383439::1793829611::1793829638::1::::<><><>0<>0<>7dcfd8689a43d1be906ff1bf220452a3<>res://.godot/imported/IMG_0069.png-367143cc3f7e243fcbaa1545f67841de.ctex::
 launcher.gd::GDScript::4593867095666808230::1794005682::0::1::::<>RigidBody2D<><>0<>0<><>::
-level.gd::GDScript::9154423340169517267::1794097244::0::1::::<>Node2D<><>0<>0<><>::
-level.tscn::PackedScene::4052237803677726787::1794032369::0::1::::<><><>0<>0<><>::uid://d3oqari8wbkbb::::res://level.gd<>uid://cemfvpu6fuoge::::res://Assets/Bumper_internal.png<>uid://cr3dx3vr4j3w5::::res://Assets/Bumper.png<>uid://5adapfc6lmd6::::res://flippers.tscn<>uid://ca8w0rsmr4slw::::res://pinball.tscn<>uid://b6pkk42c4pey5::::res://launcher.gd<>uid://ci4870rdbv1w2::::res://Pinball.png<>uid://duq7autw1iu2j::::res://IMG_0069.png
-peon.gd::GDScript::7088477428344771932::1794098766::0::1::::<>AnimatableBody2D<><>0<>0<><>::
+level.gd::GDScript::9154423340169517267::1794433386::0::1::::<>Node2D<><>0<>0<><>::
+level.tscn::PackedScene::4052237803677726787::1794433386::0::1::::<><><>0<>0<><>::uid://d3oqari8wbkbb::::res://level.gd<>uid://cemfvpu6fuoge::::res://Assets/Bumper_internal.png<>uid://cr3dx3vr4j3w5::::res://Assets/Bumper.png<>uid://5adapfc6lmd6::::res://flippers.tscn<>uid://ca8w0rsmr4slw::::res://pinball.tscn<>uid://b6pkk42c4pey5::::res://launcher.gd<>uid://ci4870rdbv1w2::::res://Pinball.png<>uid://duq7autw1iu2j::::res://IMG_0069.png
+peon.gd::GDScript::7088477428344771932::1794433484::0::1::::<>AnimatableBody2D<><>0<>0<><>::
 peon.tscn::PackedScene::8279004912878759787::1794097059::0::1::::<><><>0<>0<><>::uid://c78ygm4v0qwau::::res://peon.gd<>uid://cger0aafyu05i::::res://Assets/Goblins/Peon_Walk1.png<>uid://cx37na05qwmb8::::res://Assets/Goblins/Peon_Walk2.png<>uid://bvga1fvorf35g::::res://Untitled_Artwork 42 copy 3.png
 pinball.gd::GDScript::6869895152971470256::1793847342::0::1::::<>RigidBody2D<><>0<>0<><>::
 Pinball.png::CompressedTexture2D::5396281217008372167::1793829611::1793829638::1::::<><><>0<>0<>e701a4494460537ad70b0419594479d5<>res://.godot/imported/Pinball.png-22c2ac9b5d9fc4e5cf8ceeec82def468.ctex::
 pinball.tscn::PackedScene::4842347173231195084::1794005042::0::1::::<><><>0<>0<><>::uid://c443f05wpcse7::::res://pinball.gd<>uid://ci4870rdbv1w2::::res://Pinball.png
 README.txt::TextFile::-1::1793829611::0::1::::<><><>0<>0<><>::
+ArmorPeon.tscn::PackedScene::5066502400794157552::1794431736::0::1::::<><><>0<>0<><>::uid://dmlrkw27xag88::::res://armor_peon.gd<>uid://sqcsmvqu163w::::res://Untitled_Artwork 42.png<>uid://cdcweijrugpia::::res://Assets/Untitled_Artwork 46.png
+armor_peon.gd::GDScript::8025287575554527947::1794433386::0::1::::<>AnimatableBody2D<><>0<>0<><>::
+BoomPeon.tscn::PackedScene::3888761879074897816::1794433386::0::1::::<><><>0<>0<><>::uid://b0qlrmj2uwdjq::::res://boom_peon.gd<>uid://xmp4u6ji3kx4::::res://Untitled_Artwork 42 copy 4.png<>uid://b55xr6qvwqghc::::res://Untitled_Artwork 46 copy.png<>uid://c05f7qne4ywjr::::res://Untitled_Artwork 47 copy.png<>uid://dlutga63tayc8::::res://Untitled_Artwork 46.png<>uid://cann7poshe3se::::res://Untitled_Artwork 42 copy.png<>uid://ca86osteiu2u6::::res://Untitled_Artwork 47.png
+boom_peon.gd::GDScript::4174870709563474526::1794433737::0::1::::<>AnimatableBody2D<><>0<>0<><>::
 Untitled_Artwork 42 copy 2.png::CompressedTexture2D::7976191076414655246::1794095944::1794095956::1::::<><><>0<>0<>78a3b41590aa48fa42bb725252869f92<>res://.godot/imported/Untitled_Artwork 42 copy 2.png-91445ba6c70a6670d0eddfa258ee699b.ctex::
-Untitled_Artwork 42 copy 3.png::CompressedTexture2D::3872819392974354090::1794097037::1794097048::1::::<><><>0<>0<>8d507e15eca6807a26728f192b74a493<>res://.godot/imported/Untitled_Artwork 42 copy 3.png-511c2fb1cf07ec071a8c45a41302115a.ctex::
-Untitled_Artwork 42 copy.png::CompressedTexture2D::4800525554804796072::1794095921::1794095956::1::::<><><>0<>0<>f9ee48a976647cd7471fcc078364b322<>res://.godot/imported/Untitled_Artwork 42 copy.png-89bd88018e53b1cf415dee1dd6000153.ctex::
-Untitled_Artwork 42.png::CompressedTexture2D::1296583471301207066::1794021238::1794095956::1::::<><><>0<>0<>5fcc026bf16553671cc45aeae8c18d22<>res://.godot/imported/Untitled_Artwork 42.png-f8fcefb6b6f2a33f92a8cdc99e7f53a6.ctex::
-Untitled_Artwork 46.png::CompressedTexture2D::7973791272991394101::1794095921::1794095956::1::::<><><>0<>0<>7cefd096c78f5cba89ccc2849e02a259<>res://.godot/imported/Untitled_Artwork 46.png-e9eb2ca7229f01649b657c46127a2d29.ctex::
-Untitled_Artwork 47.png::CompressedTexture2D::4842874036125440531::1794095921::1794095956::1::::<><><>0<>0<>c90b19c12b307b81c34fb07a5cfc091a<>res://.godot/imported/Untitled_Artwork 47.png-f784106b78998c6d7a7fcd247377d6a0.ctex::
-::res://Assets/::1794032373
+Untitled_Artwork 42 copy 3.png::CompressedTexture2D::3872819392974354090::1794097037::1794431666::1::::<><><>0<>0<>8d507e15eca6807a26728f192b74a493<>res://.godot/imported/Untitled_Artwork 42 copy 3.png-511c2fb1cf07ec071a8c45a41302115a.ctex::
+Untitled_Artwork 42 copy 4.png::CompressedTexture2D::1640079578414863251::1794433816::1794433829::1::::<><><>0<>0<>a82c3a30e81ba1ad9b2dee8db26a0692<>res://.godot/imported/Untitled_Artwork 42 copy 4.png-4bf068689bc2eaad5ee14cfdce0d601b.ctex::
+Untitled_Artwork 42 copy.png::CompressedTexture2D::4800525554804796072::1794432176::1794432184::1::::<><><>0<>0<>f9ee48a976647cd7471fcc078364b322<>res://.godot/imported/Untitled_Artwork 42 copy.png-89bd88018e53b1cf415dee1dd6000153.ctex::
+Untitled_Artwork 42.png::CompressedTexture2D::1296583471301207066::1794430620::1794430622::1::::<><><>0<>0<>5fcc026bf16553671cc45aeae8c18d22<>res://.godot/imported/Untitled_Artwork 42.png-f8fcefb6b6f2a33f92a8cdc99e7f53a6.ctex::
+Untitled_Artwork 46 copy.png::CompressedTexture2D::4555445828710782216::1794433806::1794433830::1::::<><><>0<>0<>038032832e800cd19daadbfc0d12ff5d<>res://.godot/imported/Untitled_Artwork 46 copy.png-6f3b709fc32a47b3a17229a417f1f088.ctex::
+Untitled_Artwork 46.png::CompressedTexture2D::7973791272991394101::1794432183::1794432184::1::::<><><>0<>0<>7cefd096c78f5cba89ccc2849e02a259<>res://.godot/imported/Untitled_Artwork 46.png-e9eb2ca7229f01649b657c46127a2d29.ctex::
+Untitled_Artwork 47 copy.png::CompressedTexture2D::6589855382005118187::1794433826::1794433830::1::::<><><>0<>0<>6c19490ccd5532171eba862a4739b0e5<>res://.godot/imported/Untitled_Artwork 47 copy.png-31e7243aaddbe84f97ed6430f7d82176.ctex::
+Untitled_Artwork 47.png::CompressedTexture2D::4842874036125440531::1794432102::1794432104::1::::<><><>0<>0<>c90b19c12b307b81c34fb07a5cfc091a<>res://.godot/imported/Untitled_Artwork 47.png-f784106b78998c6d7a7fcd247377d6a0.ctex::
+::res://Assets/::1794431524
 Bumper.png::CompressedTexture2D::6024079014490777970::1793829611::1794032302::1::::<><><>0<>0<>95a0b698fbc7d644018c8d1cc6ed15b2<>res://.godot/imported/Bumper.png-ed49c82a90511ee5a6b4c24db7440444.ctex::
 Bumper_internal.png::CompressedTexture2D::5078711181785206872::1793829611::1794032317::1::::<><><>0<>0<>2524ff03bfcdebc2a0ad208cb52ebf3e<>res://.godot/imported/Bumper_internal.png-f537580ed8eb7eeef0510d73be556400.ctex::
 Flipper.png::CompressedTexture2D::7367297577374214116::1793852457::1794032283::1::::<><><>0<>0<>47a2f9eaa49253b608cb30053a52dc69<>res://.godot/imported/Flipper.png-9195486fa237f1e85b4456183f34c773.ctex::
+Untitled_Artwork 46.png::CompressedTexture2D::4988880005714323868::1794431516::1794431518::1::::<><><>0<>0<>4920af9d135c47f7ea6fd8805595bae8<>res://.godot/imported/Untitled_Artwork 46.png-ad9ba717fd9b19ab3351d86cb18bff42.ctex::
 ::res://Assets/Goblins/::1794032373
 Peon_Dead.png::CompressedTexture2D::7727118442979684542::1793927203::1794032366::1::::<><><>0<>0<>ead178c4375857d5dff40b652416e92b<>res://.godot/imported/Peon_Dead.png-b81c0df734b740a9b58a02d2a3651a8d.ctex::
 Peon_Walk1.png::CompressedTexture2D::5203308774215353000::1794006997::1794032349::1::::<><><>0<>0<>8a42beed362297eeae24827e243d2164<>res://.godot/imported/Peon_Walk1.png-b237dc49bd649b7815a989f25ae7e061.ctex::

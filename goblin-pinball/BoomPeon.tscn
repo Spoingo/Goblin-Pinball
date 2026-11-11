@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bvn0ltbdcubye"]
+
+[ext_resource type="Script" uid="uid://b0qlrmj2uwdjq" path="res://boom_peon.gd" id="1_fdi14"]
+[ext_resource type="Texture2D" uid="uid://xmp4u6ji3kx4" path="res://Untitled_Artwork 42 copy 4.png" id="2_882sh"]
+[ext_resource type="Texture2D" uid="uid://b55xr6qvwqghc" path="res://Untitled_Artwork 46 copy.png" id="3_jr8cp"]
+[ext_resource type="Texture2D" uid="uid://c05f7qne4ywjr" path="res://Untitled_Artwork 47 copy.png" id="4_a61og"]
+[ext_resource type="Texture2D" uid="uid://dlutga63tayc8" path="res://Untitled_Artwork 46.png" id="5_k1fy7"]
+[ext_resource type="Texture2D" uid="uid://cann7poshe3se" path="res://Untitled_Artwork 42 copy.png" id="6_gxq3w"]
+[ext_resource type="Texture2D" uid="uid://ca86osteiu2u6" path="res://Untitled_Artwork 47.png" id="7_u5ap0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qtu2u"]
+bounce = 0.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdkos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_882sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jr8cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a61og")
+}],
+"loop": 0,
+"name": &"boom",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k1fy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gxq3w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_u5ap0")
+}],
+"loop": 1,
+"name": &"still",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmrx4"]
+radius = 19.999996
+height = 169.99998
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ovaq"]
+radius = 24.999998
+height = 179.99998
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rdkos"]
+radius = 134.99998
+
+[node name="BoomPeon" type="AnimatableBody2D" unique_id=136263441]
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_qtu2u")
+script = ExtResource("1_fdi14")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1875778023]
+position = Vector2(-1.5258789e-05, 19.999931)
+sprite_frames = SubResource("SpriteFrames_rdkos")
+animation = &"boom"
+autoplay = "default"
+frame = 1
+offset = Vector2(0, -480)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1904318821]
+visible = false
+modulate = Color(1, 1, 1, 0.8117647)
+position = Vector2(160, -525)
+texture = ExtResource("4_a61og")
+offset = Vector2(-159, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1444027500]
+position = Vector2(-1.4210855e-14, -4.9999995)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_lmrx4")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=223051098]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1597437294]
+position = Vector2(-1.4210855e-14, -4.9999995)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2ovaq")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=2112145486]
+one_shot = true
+autostart = true
+
+[node name="BoomBox" type="Area2D" parent="." unique_id=563116881 groups=["Goblin"]]
+position = Vector2(0, -185.00006)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoomBox" unique_id=2031465250]
+shape = SubResource("CircleShape2D_rdkos")
+disabled = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="body_entered" from="BoomBox" to="." method="_on_boom_box_body_entered"]

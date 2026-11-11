@@ -1,9 +1,9 @@
+CollisionShape2D
+Area2D
 ColorRect
 Timer
 Node2D
 AnimatableBody2D
-CollisionShape2D
-Area2D
 Sprite2D
 AnimatedSprite2D
 CharacterBody2D

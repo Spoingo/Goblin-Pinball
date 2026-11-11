@@ -134,11 +134,11 @@ func spawn_wave():
 	#if wave == 1:
 	wave_spawns = [
 		#[nodepath,position]
-		["res://peon.tscn",Vector2(150,275)],
+		["res://BoomPeon.tscn",Vector2(150,275)],
 		["res://peon.tscn",Vector2(300,390)],
-		["res://peon.tscn",Vector2(450,275)],
+		["res://BoomPeon.tscn",Vector2(450,275)],
 		["res://peon.tscn",Vector2(600,390)],
-		["res://peon.tscn",Vector2(750,275)]
+		["res://BoomPeon.tscn",Vector2(750,275)]
 	]
 	enemy_count += wave_spawns.size()
 	print(wave_spawns.size())

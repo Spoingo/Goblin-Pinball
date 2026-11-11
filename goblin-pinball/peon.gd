@@ -3,7 +3,7 @@ extends AnimatableBody2D
 
 @onready var pinball_y_location = get_parent().get_parent().pinball_y_location
 
-var speed = 50
+var speed = 75
 
 var dir = Vector2.ZERO
 var x_dir_flip = false
@@ -68,7 +68,6 @@ func wipe():
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body != self:
-		#body.apply_central_force(-body.linear_velocity * 50)
 		die()
 
 
@@ -89,3 +88,7 @@ func _on_move_timer_timeout() -> void:
 
 func _on_despawn_timeout() -> void:
 	queue_free()
+
+
+func ignite():
+	pass
